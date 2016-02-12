@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Label's Map - An experience by Flioh!</title>
+		<meta name="description" content="Interactive map showcasing the three major labels and its respective sub-labels." />
+		<meta name="keywords" content="labels map, labels tree, warner music group, wmg, universal music group, umg, sony music, sme, music structure" />
+		<meta name="author" content="Flioh!" />
+		<link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" type="text/css" href="css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/d3.v3.min.js"></script>
+        <script src="js/treenode.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="md-modal md-effect-1" id="modal-1">
+			<div class="md-content">
+				<h3>Information</h3>
+				<div class="icon icon-cancel"></div>
+				<div>
+					<p>An interactive experience to showcase the size and complexity of the <em>'Big three'</em> major music corporations nowadays.</p>
+					<p class="secondary">This humble tree features <strong><span id="totalLabels">loading...</span></strong> labels and sub-labels, who control <strong>~80%</strong> of the music industry, with estimated total world market revenues of <a href="http://www.ifpi.org/news/music-subscription-revenues-help-drive-growth-in-most-major-markets">~15,000 US$ millions</a> in 2013.</p>
+					<a class="btn" href="http://flioh.com">Experiment by <img src="img/flioh.png" alt="Flioh!"></a>
+                </div>
+                <footer>
+					<p class="sources">Source: Wikipedia 	<a href="http://en.wikipedia.org/wiki/List_of_Universal_Music_Group_labels">[UMG]</a> 
+															<a href="http://en.wikipedia.org/wiki/List_of_Sony_Music_Entertainment_labels">[SME]</a> 
+															<a href="http://en.wikipedia.org/wiki/List_of_Warner_Music_Group_labels">[WMG]</a>
+					</p>
+					<p class="disclaimer">This is a personal experiment and not in affiliation with any of the brands displayed in any way what so ever.</p>
+
+				</footer>
+			</div>
+		</div>
+
+        <header>
+            <nav>   
+                <ul class="nav-icons">
+                    <li>
+                        <form id="searchform">  
+                            <div class="icon icon-search"></div> 
+                            <input type="text" id="search-bar" placeholder="Enter a label name..." autocomplete="off">
+                            <ul id="searchResults" class="suggested-list hidden"></ul>
+                        </form>
+                    </li>
+                    <li class="icon icon-info md-trigger" data-modal="modal-1">
+                        <p>Info</p>
+                    </li>
+                    <li id="trigger-overlay" class="icon icon-menu">
+                        <p>Filter</p>
+                    </li>
+                </ul>
+
+                <div class="overlay overlay-hugeinc">
+                    <div class="icon icon-cancel"></div>
+                    <nav>
+                        <ul>
+                            <li class="genre selected" id="all">All</li>
+                            <li class="genre" id="edm">EDM</li>
+                            <li class="genre" id="pop">Pop</li>
+                            <li class="genre" id="rock">Rock</li>
+                            <li class="genre" id="hiphop">Hip Hop</li>
+                            <li class="genre" id="various">Various</li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </nav>
+        </header>
+
+     	<div id="treenode"></div>
+		<div class="md-overlay"></div>
+        <script src="js/share.js"></script>
+		<script src="js/modalEffects.js"></script>
+   		<script src="js/classie.js"></script>
+    	<script src="js/responsiveMenu.js"></script>
+    	<script src="js/uisearch.js"></script>
+
+	</body>
+</html>
